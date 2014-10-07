@@ -1,16 +1,16 @@
 {
-  "ProjectName": "Crittercism",
-  "ProjectGuid": "16bdeb4a-266a-42d4-b784-b7e39b312792",
+  "ProjectName": "Facebook",
+  "ProjectGuid": "b3d6b9dd-d1f4-4db9-a07d-b7e4088bb60e",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.Crittercism",
+  "AppIdentifier": "com.telerik.plugindemo.crittercism",
   "DisplayName": "Crittercism",
-  "Author": "",
-  "Description": "",
+  "Author": "Telerik",
+  "Description": "Crittercism",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
-	"2"
+    "2"
   ],
   "iOSBackgroundMode": [],
   "WP8TileTitle": "",
