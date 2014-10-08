@@ -27,7 +27,6 @@
 
     <!-- ios -->
     <platform name="ios">
-        <preference name="IOS_APP_ID" />
         <config-file target="config.xml" parent="/*">
             <feature name="CDVCrittercism">
                 <param name="ios-package" value="CDVCrittercism" />
@@ -67,7 +66,6 @@
 
     <!-- android -->
     <platform name="android">
-        <preference name="ANDROID_APP_ID" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CDVCrittercism">
                 <param name="android-package" value="com.crittercism.plugin.CDVCrittercism" />
