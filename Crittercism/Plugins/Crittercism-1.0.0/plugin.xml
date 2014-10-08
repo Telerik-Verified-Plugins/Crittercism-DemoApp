@@ -27,6 +27,7 @@
 
     <!-- ios -->
     <platform name="ios">
+        <preference name="IOS_APP_ID" />
         <config-file target="config.xml" parent="/*">
             <feature name="CDVCrittercism">
                 <param name="ios-package" value="CDVCrittercism" />
@@ -45,7 +46,7 @@
     		<source-file src="platforms/ios/CrittercismSDK/dsym_upload.sh" />
 
         <config-file target="*-Info.plist" parent="CritterAppID">
-            <string>5433aea6d478bc0c6c000007</string>
+            <string>$IOS_APP_ID</string>
         </config-file>
 
         <config-file target="*-Info.plist" parent="CFBundleURLTypes">
@@ -53,7 +54,7 @@
             <dict>
               <key>CFBundleURLSchemes</key>
               <array>
-                <string>5433aea6d478bc0c6c000007</string>
+                <string>$IOS_APP_ID</string>
               </array>
             </dict>
           </array>
@@ -66,6 +67,7 @@
 
     <!-- android -->
     <platform name="android">
+        <preference name="ANDROID_APP_ID" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CDVCrittercism">
                 <param name="android-package" value="com.crittercism.plugin.CDVCrittercism" />
@@ -75,7 +77,7 @@
 
         <source-file src="platforms/android/res/values/crittercism.xml" target-dir="res/values/" />
         <config-file target="res/values/crittercism.xml" parent="/*">
-            <string name="cr_app_id">5433aeb3d478bc1ee9000003</string>
+            <string name="cr_app_id">$ANDROID_APP_ID</string>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="application">
