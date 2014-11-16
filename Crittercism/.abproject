@@ -22,10 +22,7 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "3.5.0",
   "CorePlugins": [
-    "org.apache.cordova.battery-status",
-    "org.apache.cordova.camera",
     "org.apache.cordova.console",
-    "org.apache.cordova.contacts",
     "org.apache.cordova.device",
     "org.apache.cordova.device-motion",
     "org.apache.cordova.device-orientation",
@@ -73,5 +70,6 @@
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
   ],
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "CordovaPluginVariables": {}
 }

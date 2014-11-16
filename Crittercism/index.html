@@ -26,18 +26,93 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app btn-group-vertical">
+        <div id="default" class="app btn-group-vertical">
             <img src="img/c-gray.png" height="42" width="42" style="margin-bottom:10px"/>
             <div class="well">
                 Press the buttons and watch data appear in your Crittercism.com dashboard
             </div>
-            <button type="button" class="btn btn-primary" id="breadcrumb_submit">Log breadcrumb</button><br/>
-            <button type="button" class="btn btn-info" id="set_username">Set username</button><br/>
-            <button type="button" class="btn btn-success" id="set_metadata">Set metadata</button><br/>
-            <button type="button" class="btn btn-warning" id="handled_exception">Handled exception</button><br/>
-            <button type="button" class="btn btn-danger" id="crashButton">Crash Application</button>
+    <button type="button" class="btn btn-primary" id="breadcrumb_submit">Log breadcrumb</button>
+    <button type="button" class="btn btn-primary" id="set_username">Set username</button>
+    <button type="button" class="btn btn-primary" id="set_metadata">Set metadata</button>
+    <button type="button" class="btn btn-primary" id="handled_exception">Handled exception</button>
+    <button type="button" class="btn btn-primary" id="crash_application">Crash Application</button>
+    <button type="button" class="btn btn-success" id="test_APM">Network Monitoring</button>
         </div>
+<div id="service_monitoring" class="app btn-group-vertical">
+    <h4>Configuration</h4>
 
+    <b>URL Scheme</b>
+    <form action="">
+        <input type="radio" name="url_scheme" value="http" checked="true">http&nbsp;
+        <input type="radio" name="url_scheme" value="https">https
+    </form>
+    <br>
+
+    <b>Timing</b>
+    <form action="">
+        <input type="radio" name="sync" value="true">Synchronous&nbsp;
+        <input type="radio" name="sync" value="false" checked="true">Asynchronous
+    </form>
+    <br>
+
+    <b>Networking API</b>
+    <form action="">
+        <input type="radio" name="networking_api" value="jquery">jQuery&nbsp;
+        <input type="radio" name="networking_api" value="xhr" checked="true">XMLHttpRequest
+    </form>
+    <br>
+
+    <b>Timeout Period</b>
+    <form action="">
+        <input type="radio" name="timeout" value="0" checked="true">Default&nbsp;
+        <input type="radio" name="timeout" value="1000">1000ms&nbsp;
+        <input type="radio" name="timeout" value="5000">5000ms
+    </form>
+    <br>
+
+    <b>HTTP Method</b>
+    <form action="">
+        <input type="radio" name="http_method" value="get" checked="true">GET
+        <input type="radio" name="http_method" value="post">POST
+    </form>
+    <br>
+
+    <b>Size of request payload</b>
+    <form action="">
+        <input type="radio" name="bytes_out" value="0" checked="true">0kb
+        <input type="radio" name="bytes_out" value="1024">1k
+        <input type="radio" name="bytes_out" value="8192">8k
+        <input type="radio" name="bytes_out" value="65536">64k
+    </form>
+
+    <br>
+    <h4>Actions</h4>
+
+    <b>Status Code Tests</b>
+    <br>
+
+    <button type="button" id="response_code_202">202</button>
+    <button type="button" id="response_code_404">404</button>
+    <button type="button" id="response_code_500">500</button>
+    <br>
+
+    <br><b>Response Time Tests</b><br>
+    <button type="button" id="delay_1">1s</button>
+    <button type="button" id="delay_2">2s</button>
+    <button type="button" id="delay_5">5s</button>
+    <br>
+
+    <br><b>Response Payload Tests</b><br>
+    <button type="button" id="bytes_in_0">0k</button>
+    <button type="button" id="bytes_in_4k">4k</button>
+    <button type="button" id="bytes_in_8k">8k</button>
+
+    <br>
+    <br>
+    <button type="button" class="btn btn-success" id="abort_request">Abort request</button>
+    <button type="button" class="btn btn-primary" id="go_back">Back</button>
+</div>
+        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
