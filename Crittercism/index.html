@@ -17,27 +17,35 @@
     specific language governing permissions and limitations
     under the License.
 -->
+
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/app.css" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div id="default" class="app btn-group-vertical">
-            <img src="img/c-gray.png" height="42" width="42" style="margin-bottom:10px"/>
-            <div class="well">
-                Press the buttons and watch data appear in your Crittercism.com dashboard
-            </div>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>Hello World</title>
+    <script>
+        window.onerror = function(a,b,c) {
+            alert(a);
+            alert(c);
+        }
+    </script>
+</head>
+<body>
+<div id="default" class="app btn-group-vertical">
+    <img src="img/c-gray.png" height="42" width="42" style="margin-bottom:10px"/>
+    <div class="well">
+        Press the buttons and watch data appear in your Crittercism.com dashboard
+    </div>
     <button type="button" class="btn btn-primary" id="breadcrumb_submit">Log breadcrumb</button>
     <button type="button" class="btn btn-primary" id="set_username">Set username</button>
     <button type="button" class="btn btn-primary" id="set_metadata">Set metadata</button>
     <button type="button" class="btn btn-primary" id="handled_exception">Handled exception</button>
     <button type="button" class="btn btn-primary" id="crash_application">Crash Application</button>
-    <button type="button" class="btn btn-success" id="test_APM">Network Monitoring</button>
-        </div>
+    <button type="button" class="btn btn-success" id="test_APM">Test APM</button>
+    <button type="button" class="btn btn-success" id="test_transactions">Test Transactions</button>
+</div>
 <div id="service_monitoring" class="app btn-group-vertical">
     <h4>Configuration</h4>
 
@@ -110,14 +118,60 @@
     <br>
     <br>
     <button type="button" class="btn btn-success" id="abort_request">Abort request</button>
-    <button type="button" class="btn btn-primary" id="go_back">Back</button>
+    <button type="button" class="btn btn-primary" id="return_from_service_monitoring">Back</button>
 </div>
-        
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+
+<div id="transactions" class="app btn-group-vertical">
+    <b>Transaction A</b>
+    <br>
+
+    <button type="button" id="transactionA_start">Start</button>
+    <button type="button" id="transactionA_startWithValue">StartWithValue</button>
+    <button type="button" id="transactionA_end">End</button>
+
+    <br>
+
+    <button type="button" id="transactionA_fail">Fail</button>
+    <button type="button" id="transactionA_increase">IncreaseValue</button>
+    <button type="button" id="transactionA_get">GetValue</button>
+
+    <br>
+    <b>Transaction B</b>
+    <br>
+
+    <button type="button" id="transactionB_start">Start</button>
+    <button type="button" id="transactionB_startWithValue">StartWithValue</button>
+    <button type="button" id="transactionB_end">End</button>
+
+    <br>
+
+    <button type="button" id="transactionB_fail">Fail</button>
+    <button type="button" id="transactionB_increase">IncreaseValue</button>
+    <button type="button" id="transactionB_get">GetValue</button>
+
+    <br>
+    <b>Transaction C</b>
+    <br>
+
+    <button type="button" id="transactionC_start">Start</button>
+    <button type="button" id="transactionC_startWithValue">StartWithValue</button>
+    <button type="button" id="transactionC_end">End</button>
+
+    <br>
+
+    <button type="button" id="transactionC_fail">Fail</button>
+    <button type="button" id="transactionC_increase">IncreaseValue</button>
+    <button type="button" id="transactionC_get">GetValue</button>
+
+    <br>
+    <button type="button" class="btn btn-primary" id="return_from_transactions">Back</button>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
 </html>
