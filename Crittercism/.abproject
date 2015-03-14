@@ -17,10 +17,10 @@
   "WP8Publisher": "",
   "WP8Capabilities": [],
   "WP8Requirements": [],
-  "WP8PublisherID": "",
-  "WP8ProductID": "",
+  "WP8PublisherID": "{2cbb2aba-d095-471e-9c15-6680625ccb43}",
+  "WP8ProductID": "{acba14db-b834-4bbd-ab78-4b37fa1b99f0}",
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
-  "FrameworkVersion": "3.5.0",
+  "FrameworkVersion": "3.7.0",
   "CorePlugins": [
     "org.apache.cordova.console",
     "org.apache.cordova.device",
@@ -71,5 +71,12 @@
     "ID_RESOLUTION_HD720P"
   ],
   "Framework": "Cordova",
-  "CordovaPluginVariables": {}
+  "CordovaPluginVariables": {
+    "com.Crittercism.PhoneGap": {
+      "ANDROID_APP_ID": "5433aeb3d478bc1ee9000003",
+      "IOS_APP_ID": "5433aea6d478bc0c6c000007"
+    }
+  },
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.plugindemo.crittercism"
 }
