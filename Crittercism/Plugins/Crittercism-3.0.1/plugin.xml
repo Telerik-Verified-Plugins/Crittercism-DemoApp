@@ -4,7 +4,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.Crittercism.PhoneGap"
-    version="3.0.0">
+    version="3.0.1">
 
     <name>Crittercism</name>
 
@@ -70,7 +70,9 @@
 
         <config-file target="AndroidManifest.xml" parent="application">
             <meta-data android:name="com.crittercism.sdk.ApplicationId" android:value="@string/cr_app_id"/>
-            <!-- PhoneGap adds the INTERNET permission by itself -->
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.READ_LOGS"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.GET_TASKS"/>
